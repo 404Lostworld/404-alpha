@@ -1,18 +1,18 @@
-<!doctype html><html lang="sv"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>404 Alpha – GPS Map v0.5</title><style>
+<!doctype html><html lang="sv"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>404 Alpha – GPS Map v0.9</title><style>
 *{box-sizing:border-box}body{margin:0;background:#080d20;color:#e9f7ff;font-family:system-ui,Arial}main{max-width:520px;margin:auto;padding:16px}h1{font-size:23px;margin:0 0 5px}small{color:#91aec8}.map{height:55vh;min-height:340px;position:relative;overflow:hidden;border:1px solid #31516b;border-radius:18px;margin-top:12px;background:radial-gradient(circle at 48% 55%,#1c3450,#0b172b 75%)}.road{position:absolute;background:#29435b;border:2px solid #3e647d;opacity:.8}.road.a{width:120%;height:30px;top:45%;left:-10%;transform:rotate(-18deg)}.road.b{width:35px;height:120%;top:-10%;left:62%;transform:rotate(19deg)}.road.c{width:100%;height:18px;top:78%;left:0;transform:rotate(7deg)}.building{position:absolute;border:1px solid #52738b;background:#182e44;border-radius:8px}.b1{left:6%;top:10%;width:32%;height:19%}.b2{right:7%;top:15%;width:22%;height:20%}.b3{left:12%;bottom:8%;width:28%;height:18%}.b4{right:6%;bottom:8%;width:28%;height:16%}.marker{position:absolute;transform:translate(-50%,-50%);border:0;background:none;font-size:30px;cursor:pointer;filter:drop-shadow(0 0 8px #56caff);z-index:2}.npc{filter:drop-shadow(0 0 9px #ff4fc6)}.fragment{filter:drop-shadow(0 0 9px #a779ff)}.player{font-size:35px;filter:drop-shadow(0 0 13px #31eaff);pointer-events:none;z-index:4}.range{position:absolute;width:100px;height:100px;border:1px solid #37eaff77;border-radius:50%;background:#22ddff11;transform:translate(-50%,-50%);pointer-events:none}.controls{display:grid;grid-template-columns:repeat(3,55px);justify-content:center;gap:5px;margin:12px auto}.controls button{height:44px;background:#1b3452;border:1px solid #507d9d;color:white;border-radius:10px;font-size:20px;cursor:pointer}.controls button:active{background:#386888}.status{min-height:44px;color:#bde8f2;text-align:center}.top{display:flex;justify-content:space-between;gap:8px;align-items:center}.pill{background:#172a44;border:1px solid #3b5875;border-radius:20px;padding:6px 10px;font-size:12px}.hidden{display:none!important}.battle{position:fixed;inset:0;background:#090e20;z-index:3000;overflow:auto;display:flex;align-items:center;justify-content:center;padding:6px}.battle-inner{width:min(100%,500px);text-align:center}.bars{display:grid;gap:12px;margin:20px 0}.names{display:flex;justify-content:space-between;font-size:13px}.track{height:12px;border-radius:9px;background:#27354b;overflow:hidden;margin-top:5px}.fill{height:100%;background:#50e2d7;width:100%}.fill.enemy{background:#ff5b9e}.time-track{height:9px;background:#34253f;border-radius:20px;overflow:hidden;margin:14px 0 8px}.time-fill{width:100%;height:100%;background:linear-gradient(90deg,#ff68c9,#ff2f9f);transform-origin:left center;box-shadow:0 0 10px #ff4fbc}.vs-intro{position:absolute;inset:0;z-index:5;background:#090e20;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;padding:20px}.vs-pair{display:flex;align-items:center;justify-content:space-around;width:100%;gap:10px}.vs-person{display:grid;justify-items:center;gap:10px;flex:1}.vs-emoji{font-size:clamp(60px,19vw,105px);filter:drop-shadow(0 0 16px #ff5ab688)}.vs-word{font-size:clamp(30px,9vw,52px);color:#ff58bd;font-weight:950;font-style:italic;text-shadow:0 0 20px #ff3bb588}.vs-name{font-size:13px;font-weight:800;letter-spacing:1px}.vs-count{font-size:64px;font-weight:900;color:#fff}.arena{width:min(calc(100vw - 6px),440px);height:min(calc(100vw - 6px),440px);position:relative;margin:72px auto 12px}.arena svg{width:100%;height:100%}.above{position:absolute;bottom:calc(100% + 8px);left:0;right:0;font-size:43px;font-weight:850;height:60px;display:grid;place-items:center}.hit{touch-action:manipulation;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);border:3px solid #ffb0e5;border-radius:50%;height:100px;width:100px;background:radial-gradient(circle,#ff70d0,#b80e80);color:#fff;font-size:32px;font-weight:850;box-shadow:0 0 25px #ff45c488;cursor:pointer}.hit:disabled{opacity:.55}.action{padding:12px 18px;background:#243d60;border:1px solid #6086a3;color:#fff;border-radius:12px;font-weight:700;cursor:pointer}.desc{min-height:45px;color:#c8d9ec}.hint{font-size:12px;color:#9fb4ce;line-height:1.5}</style><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/><script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script><style>
 #map{height:63vh;min-height:390px;background:#101d31}.leaflet-container{background:#101d31}.leaflet-tile-pane{filter:brightness(.67) saturate(.7) hue-rotate(165deg)}.leaflet-control-attribution{font-size:9px!important}.controls{display:none!important}.gpsbuttons{display:flex;gap:8px;margin:10px 0;flex-wrap:wrap}.gpsbuttons button{background:#203b5b;border:1px solid #477b9a;border-radius:10px;color:white;padding:11px 13px;font-weight:700;cursor:pointer}.gpsbuttons button.active{background:#9e2478}.hint{margin-top:5px}.map-icon{background:none;border:none}.map-icon span{font-size:28px;filter:drop-shadow(0 0 7px #e45ed7)}.map-icon.scout span{filter:drop-shadow(0 0 10px #19e8ff)}
-</style></head><body><main><div class="top"><div><h1>404 <span style="color:#ff5fca">WORLD NOT FOUND</span></h1><small>ALPHA • GPS-KARTA • TRYSIL • V0.7</small></div><span class="pill" id="fragments">Fragments: 0</span></div><div class="map" id="map"></div><div class="gpsbuttons"><button id="gps">📍 Starta GPS</button><button id="demo">🎮 Demoläge</button><button id="reset">↺ Återställ demo</button><button id="follow">🎯 Följ Scout</button></div><div class="status" id="status">Tryck på Starta GPS på mobilen, eller välj Demoläge på datorn.</div><p class="hint">GPS behöver normalt en säker HTTPS-adress (eller localhost). Demoläget kan testas direkt i webbläsaren. 🧸 = NPC, 💎 = Fragment. Klicka på symboler när du är inom 30 meter. Dra eller zooma för att utforska; tryck 🎯 Följ Scout för att återgå. Kartrotation kommer i nästa uppdatering.</p></main><section class="battle hidden" id="battle"><div class="vs-intro" id="vsIntro"><div class="vs-pair"><div class="vs-person"><div class="vs-emoji">🤖</div><div class="vs-name">SCOUT</div></div><div class="vs-word">VS</div><div class="vs-person"><div class="vs-emoji">🧸</div><div class="vs-name" id="vsEnemy">REALTEDDY</div></div></div><div class="vs-count" id="vsCount">3</div></div><div class="battle-inner"><h1>404 <span style="color:#ff5fca">PULSE COMBAT</span></h1><small>SCOUT VS REALTEDDY</small><div class="bars"><div><div class="names"><b>🤖 SCOUT</b><span id="hp1">400 / 400</span></div><div class="track"><div class="fill" id="bar1"></div></div></div><div><div class="names"><b>🧸 REALTEDDY</b><span id="hp2">400 / 400</span></div><div class="track"><div class="fill enemy" id="bar2"></div></div></div></div><div id="round">STRIDEN STARTAR</div><div class="time-track"><div class="time-fill" id="timeFill"></div></div><div class="arena"><div class="above" id="above"></div><svg viewBox="0 0 360 360"><circle cx="180" cy="180" r="168" fill="none" stroke="#ff4bc4" stroke-width="5"/><circle id="trail" cx="180" cy="180" r="0" fill="none" stroke="#fff" stroke-opacity=".22" stroke-width="6"/><circle id="pulse" cx="180" cy="180" r="0" fill="none" stroke="#fff" stroke-width="4"/></svg><button class="hit" id="hit" disabled>HIT</button></div><div class="desc" id="desc">Båda attackerar samtidigt efter varje 5-sekundersomgång.</div><button class="action" id="back">Till kartan</button> <button class="action" id="restart">Ny strid</button></div></section><script>
+</style></head><body><main><div class="top"><div><h1>404 <span style="color:#ff5fca">WORLD NOT FOUND</span></h1><small>ALPHA • GPS-KARTA • TRYSIL • V0.9</small></div><span class="pill" id="fragments">Fragments: 0</span></div><div class="map" id="map"></div><div class="gpsbuttons"><button id="gps">📍 Starta GPS</button><button id="demo">🎮 Demoläge</button><button id="reset">↺ Återställ demo</button><button id="follow">🎯 Följ Scout</button></div><div class="status" id="status">Tryck på Starta GPS på mobilen, eller välj Demoläge på datorn.</div><p class="hint">GPS behöver normalt en säker HTTPS-adress (eller localhost). Demoläget kan testas direkt i webbläsaren. 🧸 = NPC, 💎 = Fragment. Klicka på symboler när du är inom 25 meter. Dra eller zooma för att utforska; tryck 🎯 Följ Scout för att återgå. Kartrotation kommer i nästa uppdatering.</p></main><section class="battle hidden" id="battle"><div class="vs-intro" id="vsIntro"><div class="vs-pair"><div class="vs-person"><div class="vs-emoji">🤖</div><div class="vs-name">SCOUT</div></div><div class="vs-word">VS</div><div class="vs-person"><div class="vs-emoji">🧸</div><div class="vs-name" id="vsEnemy">REALTEDDY</div></div></div><div class="vs-count" id="vsCount">3</div></div><div class="battle-inner"><h1>404 <span style="color:#ff5fca">PULSE COMBAT</span></h1><small>SCOUT VS REALTEDDY</small><div class="bars"><div><div class="names"><b>🤖 SCOUT</b><span id="hp1">100 / 100</span></div><div class="track"><div class="fill" id="bar1"></div></div></div><div><div class="names"><b>🧸 REALTEDDY</b><span id="hp2">100 / 100</span></div><div class="track"><div class="fill enemy" id="bar2"></div></div></div></div><div id="round">STRIDEN STARTAR</div><div class="time-track"><div class="time-fill" id="timeFill"></div></div><div class="arena"><div class="above" id="above"></div><svg viewBox="0 0 360 360"><circle cx="180" cy="180" r="168" fill="none" stroke="#ff4bc4" stroke-width="5"/><circle id="trail" cx="180" cy="180" r="0" fill="none" stroke="#fff" stroke-opacity=".22" stroke-width="6"/><circle id="pulse" cx="180" cy="180" r="0" fill="none" stroke="#fff" stroke-width="4"/></svg><button class="hit" id="hit" disabled>HIT</button></div><div class="desc" id="desc">Båda attackerar samtidigt efter varje 4,8-sekundersomgång.</div><button class="action" id="back">Till kartan</button> <button class="action" id="restart">Ny strid</button></div></section><script>
 'use strict';
 const $=id=>document.getElementById(id),status=$('status');
 // Preliminär kartmitt för Radisson Blu Resort Trysil. Exakt centrum och placering av objekt finjusteras på plats.
-const CENTER=[61.3074,12.2463],SIDE=500,INTERACT=30;
+const CENTER=[61.3074,12.2463],SIDE=500,INTERACT=25;
 let autoFollow=true;let found=0,mode='idle',watchId=null,position=null,sim=null,map=null,scoutMarker=null,rangeCircle=null;
 const R=6371000,toRad=d=>d*Math.PI/180;
 function dist(a,b){const p=toRad(a[0]),q=toRad(b[0]),dp=q-p,dl=toRad(b[1]-a[1]);return 2*R*Math.asin(Math.sqrt(Math.sin(dp/2)**2+Math.cos(p)*Math.cos(q)*Math.sin(dl/2)**2))}
 function offset(east,north){return [CENTER[0]+north/111320,CENTER[1]+east/(111320*Math.cos(toRad(CENTER[0])))]}
 const objects=[{east:-175,north:155,t:'npc',e:'🧸',name:'RealTeddy'},{east:175,north:150,t:'npc',e:'🚕',name:'Cybercab'},{east:145,north:-165,t:'npc',e:'🧊',name:'Electroluxys'},{east:-160,north:-135,t:'fragment',e:'💎'},{east:15,north:195,t:'fragment',e:'💎'},{east:195,north:5,t:'fragment',e:'💎'},{east:-10,north:-190,t:'fragment',e:'💎'},{east:-195,north:10,t:'fragment',e:'💎'}].map(o=>({...o,coords:offset(o.east,o.north),collected:false}));
 function icon(emoji,klass=''){return L.divIcon({className:'map-icon '+klass,html:'<span>'+emoji+'</span>',iconSize:[38,38],iconAnchor:[19,19]})}
-function setPosition(coords,pan=true){position=coords;scoutMarker.setLatLng(coords);rangeCircle.setLatLng(coords);if(pan&&autoFollow)map.panTo(coords);const outside=Math.abs((coords[0]-CENTER[0])*111320)>250||Math.abs((coords[1]-CENTER[1])*111320*Math.cos(toRad(CENTER[0])))>250;status.textContent=outside?'Du är utanför Alpha-området. Kartan fungerar, men här finns inget spelinnehåll.':'Scout är på kartan. Gå inom 30 meter från en symbol och tryck på den.'}
+function setPosition(coords,pan=true){position=coords;scoutMarker.setLatLng(coords);rangeCircle.setLatLng(coords);if(pan&&autoFollow)map.panTo(coords);const outside=Math.abs((coords[0]-CENTER[0])*111320)>250||Math.abs((coords[1]-CENTER[1])*111320*Math.cos(toRad(CENTER[0])))>250;status.textContent=outside?'Du är utanför Alpha-området. Kartan fungerar, men här finns inget spelinnehåll.':'Scout är på kartan. Gå inom 25 meter från en symbol och tryck på den.'}
 function initMap(){if(typeof L==='undefined'){status.textContent='Kartbiblioteket kunde inte laddas. Kontrollera internetanslutningen och öppna filen igen.';return}map=L.map('map',{zoomControl:true}).setView(CENTER,16);map.on('dragstart',()=>{autoFollow=false});map.on('zoomstart',()=>{if(mode==='gps')autoFollow=false});L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'© OpenStreetMap contributors'}).addTo(map);
 // Inga synliga spelgränser: området styr bara var innehåll skapas.
 scoutMarker=L.marker(CENTER,{icon:icon('🤖','scout'),zIndexOffset:1000}).addTo(map);rangeCircle=L.circle(CENTER,{radius:INTERACT,color:'#36eaff',weight:1,fillColor:'#36eaff',fillOpacity:.06,interactive:false}).addTo(map);
@@ -22,27 +22,30 @@ status.textContent='Välj Starta GPS eller Demoläge. Kartan visar området runt
 function interact(o){if(!position){status.textContent='Starta GPS eller demoläget först.';return}const meters=Math.round(dist(position,o.coords));if(meters>INTERACT){status.textContent=o.name?o.name+' är '+meters+' meter bort. Gå närmare!':'Fragment är '+meters+' meter bort. Gå närmare!';return}if(o.t==='fragment'){if(o.collected)return;o.collected=true;map.removeLayer(o.marker);found++;$('fragments').textContent='Fragments: '+found;status.textContent='Fragment insamlad! 💎'}else{status.textContent=o.name+' upptäckt!';startBattle(o.name)}}
 function stopGps(){if(watchId!==null){navigator.geolocation.clearWatch(watchId);watchId=null}}
 function startGps(){if(!map)return;autoFollow=true;stopGps();mode='gps';$('gps').classList.add('active');$('demo').classList.remove('active');status.textContent='Begär GPS-position…';if(!navigator.geolocation){status.textContent='Din webbläsare saknar GPS-stöd. Prova demoläge.';return}if(!window.isSecureContext){status.textContent='GPS blockeras ofta när HTML-filen öppnas lokalt. För riktig GPS behövs HTTPS eller localhost. Demoläge fungerar här.';return}watchId=navigator.geolocation.watchPosition(p=>{const c=[p.coords.latitude,p.coords.longitude];setPosition(c,true);status.textContent+=' GPS-noggrannhet ±'+Math.round(p.coords.accuracy)+' m.'},e=>{status.textContent='GPS kunde inte starta: '+e.message+'. Prova demoläge eller ge platsåtkomst i webbläsaren.'},{enableHighAccuracy:true,maximumAge:1000,timeout:15000})}
-function startDemo(){if(!map)return;autoFollow=true;stopGps();mode='demo';$('gps').classList.remove('active');$('demo').classList.add('active');sim=CENTER.slice();setPosition(sim,true);map.setZoom(17);status.textContent='DEMOLÄGE: klicka på kartan för att flytta Scout. NPC och Fragments kräver 30 meters avstånd.'}
+function startDemo(){if(!map)return;autoFollow=true;stopGps();mode='demo';$('gps').classList.remove('active');$('demo').classList.add('active');sim=CENTER.slice();setPosition(sim,true);map.setZoom(17);status.textContent='DEMOLÄGE: klicka på kartan för att flytta Scout. NPC och Fragments kräver 25 meters avstånd.'}
 function resetDemo(){if(mode!=='demo')startDemo();else{sim=CENTER.slice();setPosition(sim,true)}}
 document.getElementById('follow').onclick=()=>{autoFollow=true;if(position)map.panTo(position);status.textContent='Kartan följer Scout igen.'};document.getElementById('gps').onclick=startGps;document.getElementById('demo').onclick=startDemo;document.getElementById('reset').onclick=resetDemo;
-window.addEventListener('load',()=>{initMap();if(map)map.on('click',e=>{if(mode==='demo'){sim=[e.latlng.lat,e.latlng.lng];setPosition(sim,false);status.textContent='DEMOLÄGE: Scout flyttad. Tryck på en NPC eller Fragment när du är inom 30 meter.'}})});
-let start=0,turn=0,used=false,pending=0,hp1=400,hp2=400,done=false,active=false,flashUntil=0,damageText='',quality='';const PREP=3000,WINDOW=5000,PERIOD=1200;let frozenRadius=0;let enemyName="RealTeddy";
-function bars(){$('hp1').textContent=Math.max(0,hp1)+' / 400';$('hp2').textContent=Math.max(0,hp2)+' / 400';$('bar1').style.width=Math.max(0,hp1/4)+'%';$('bar2').style.width=Math.max(0,hp2/4)+'%'}
+window.addEventListener('load',()=>{initMap();if(map)map.on('click',e=>{if(mode==='demo'){sim=[e.latlng.lat,e.latlng.lng];setPosition(sim,false);status.textContent='DEMOLÄGE: Scout flyttad. Tryck på en NPC eller Fragment när du är inom 25 meter.'}})});
+let start=0,turn=0,used=false,pending=0,hp1=100,hp2=100,done=false,active=false,flashUntil=0,damageText='',quality='';const PREP=3000,WINDOW=4800,PERIOD=1200;const BASE_ENERGY=100,BASE_DAMAGE=20,BASE_CRIT=.05,BASE_MISS=.20,CRIT_MULT=1.5;let frozenRadius=0;let enemyName="RealTeddy";
+function bars(){const a=Math.max(0,Math.round(hp1)),b=Math.max(0,Math.round(hp2));$('hp1').textContent=a+' / '+BASE_ENERGY;$('hp2').textContent=b+' / '+BASE_ENERGY;$('bar1').style.width=(100*a/BASE_ENERGY)+'%';$('bar2').style.width=(100*b/BASE_ENERGY)+'%'}
+// Four pulses reach the target ring at 1.2, 2.4, 3.6 and 4.8 seconds.
+function pulsePhase(within){return Math.min(1,(within%PERIOD)/PERIOD)}
+function pulseRadius(within){return 168*Math.pow(pulsePhase(within),2.8)}
 function startBattle(name='RealTeddy'){
  enemyName=name;$('vsEnemy').textContent=name.toUpperCase();
  $('battle').classList.remove('hidden');$('vsIntro').classList.remove('hidden');
- start=performance.now();turn=0;used=false;pending=0;hp1=hp2=400;done=false;active=true;flashUntil=0;frozenRadius=0;
+ start=performance.now();turn=0;used=false;pending=0;hp1=hp2=BASE_ENERGY;done=false;active=true;flashUntil=0;frozenRadius=0;
  $('hit').disabled=true;$('above').textContent='';$('timeFill').style.width='100%';
  $('pulse').setAttribute('r',0);$('trail').setAttribute('r',0);
- $('desc').textContent='Båda attackerar samtidigt efter varje 5-sekundersomgång.';bars();
+ $('desc').textContent='Båda attackerar samtidigt efter varje 4,8-sekundersomgång.';bars();
 }
 function finish(){
- hp1-=80;hp2-=pending;bars();
+ hp1-=Math.round(BASE_DAMAGE*.8);hp2-=pending;bars();
  if(hp1<=0||hp2<=0){
   done=true;$('hit').disabled=true;
   const won=hp2<=0&&(hp1>0||hp1>hp2);
   $('desc').textContent=won?'DU VANN! ⚡':'MOTSTÅNDAREN VANN';
-  if(won){hp1=400;bars()}
+  if(won){hp1=BASE_ENERGY;bars()}
   $('round').textContent='STRIDEN SLUT';$('above').textContent=won?'VICTORY':'DEFEAT';$('timeFill').style.width='0%';
   return;
  }
@@ -69,14 +72,14 @@ function tick(now){
    if(!done){
     const within=fight%WINDOW;
     $('timeFill').style.width=(100*(1-within/WINDOW))+'%';
-    const phase=(fight%PERIOD)/PERIOD;
+    const phase=(within%PERIOD)/PERIOD;
     const r=used?frozenRadius:168*Math.pow(phase,2.8);
     $('pulse').setAttribute('r',Math.max(.1,r));
     $('trail').setAttribute('r',Math.max(.1,r-4));
     if(used){
      $('above').textContent=damageText;
      $('above').style.color=quality==='crit'?'#ffd14b':'#fff';
-     $('above').style.fontSize=quality==='normal'?'29px':'43px';
+     $('above').style.fontSize=quality==='good'||quality==='poor'?'29px':'43px';
     }else{$('above').textContent=''}
    }
   }
@@ -88,15 +91,19 @@ $('hit').onclick=()=>{
  const now=performance.now();
  if(now-start<PREP)return;
  used=true;$('hit').disabled=true;
- const phase=((now-start-PREP)%PERIOD)/PERIOD;
- frozenRadius=168*Math.pow(phase,2.8);
- const acc=Math.floor(100*Math.pow(phase,2.8)),crit=acc>=90&&Math.random()<.18;
- quality=crit?'crit':acc>=90?'perfect':'normal';
- pending=Math.max(1,Math.round(acc*(crit?4:1)));
- damageText=String(pending);flashUntil=now+950;
+ const within=(now-start-PREP)%WINDOW;
+ const phase=pulsePhase(within);
+ frozenRadius=pulseRadius(within);
+ const acc=Math.round(100*Math.pow(phase,2.8));
+ const tier=acc>=90?'perfect':acc>=65?'good':'poor';
+ const missed=Math.random()<BASE_MISS;
+ const crit=!missed&&Math.random()<BASE_CRIT;
+ quality=missed?'miss':crit?'crit':tier;
+ pending=missed?0:Math.round(BASE_DAMAGE*({perfect:1,good:.75,poor:.5}[tier])*(crit?CRIT_MULT:1));
+ damageText=missed?'MISS':String(pending);flashUntil=now+950;
  $('pulse').setAttribute('r',Math.max(.1,frozenRadius));
  $('trail').setAttribute('r',Math.max(.1,frozenRadius-4));
- $('desc').textContent=crit?'CRITICAL HIT!':acc>=90?'PERFECT HIT!':'TRÄFF • '+acc+'%';
+ $('desc').textContent=missed?'MISS (20 % slumpmiss)':crit?'CRITICAL HIT!':tier.toUpperCase()+' HIT • '+acc+'%';
  if(crit&&navigator.vibrate)navigator.vibrate([75,35,100]);
 };
 $('back').onclick=()=>{active=false;$('battle').classList.add('hidden');status.textContent='Tillbaka på kartan. Fortsätt utforska!'};$('restart').onclick=()=>startBattle(enemyName);requestAnimationFrame(tick);
