@@ -1,1 +1,3 @@
-404 Alpha v0.31.9: Goggles crown fit based on v0.31.4 geometry, with a backward tilt and reduced depth. Inventory graphics/layout from v0.31.8 retained. Copy all files into 404-alpha repository root, replacing existing files. Visual fit still needs testing.
+404 Alpha v0.32.0 - Goggles fitting test
+Goggles: 15% smaller, same vertical position, 0.085m backward.
+Replace files in repository root, not graphics-test.
