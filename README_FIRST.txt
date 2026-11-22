@@ -1,3 +1,1 @@
-404 Alpha v0.31.7 — Goggles crown fitting and Inventory rendering polish.
-Copy files into the 404-alpha repository root (not graphics-test). Preserve other files. Commit and push with GitHub Desktop.
-The equipped GLBs are adjusted for both Scout variants. Keep backups in GitHub history.
+404 Alpha v0.31.8 — Goggles fitted closer to the crown, with a slight backward tilt and narrower profile. Both equipped Scout GLBs updated. Inventory/game systems otherwise retained from v0.31.7. Copy files to repository root (not graphics-test), commit and push.
