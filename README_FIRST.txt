@@ -1,1 +1,1 @@
-404 Alpha v0.31.8 — Goggles fitted closer to the crown, with a slight backward tilt and narrower profile. Both equipped Scout GLBs updated. Inventory/game systems otherwise retained from v0.31.7. Copy files to repository root (not graphics-test), commit and push.
+404 Alpha v0.31.9: Goggles crown fit based on v0.31.4 geometry, with a backward tilt and reduced depth. Inventory graphics/layout from v0.31.8 retained. Copy all files into 404-alpha repository root, replacing existing files. Visual fit still needs testing.
