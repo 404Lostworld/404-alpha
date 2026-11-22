@@ -1,1 +1,3 @@
-404 Alpha v0.31.6 — Inventory graphics layout fix. Desktop inventory width increases from 560px to up to 1040px; Scout viewport is 590px tall with a wider center column. Same model-viewer render settings as successful graphics test. No extra viewer/button. All game code, models, goggles, equipment and character selection preserved. Note: goggles placement is unchanged from v0.31.5 and requires separate fitting. Copy these files to the ROOT of 404-alpha (not graphics-test), overwrite, commit, push.
+404 Alpha v0.31.7 — Goggles crown fitting and Inventory rendering polish.
+Copy files into the 404-alpha repository root (not graphics-test). Preserve other files. Commit and push with GitHub Desktop.
+The equipped GLBs are adjusted for both Scout variants. Keep backups in GitHub history.
