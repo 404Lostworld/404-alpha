@@ -1,1 +1,1 @@
-404 Alpha v0.31.3 test: goggles 2x v0.31.2, no added black strap meshes, larger Scout viewer. Pixelation requires visual testing; model textures unchanged. Copy all files into repo root.
+404 Alpha v0.31.4 — Grafiktestets ljus/miljö och större Inventory 3D-yta. Goggles flyttade 10,5 cm uppåt i GLB-koordinater (modellens enheter), oförändrad storlek. Kopiera filerna till 404-alpha, ersätt, Commit, Push. Behåll gamla versionen via GitHub History.
